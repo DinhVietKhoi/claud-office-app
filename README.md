@@ -7,7 +7,7 @@ thể vào chung một team để thấy nhau đang làm gì và nhắn tin cho 
 
 Chạy trên **macOS** (chip Apple và Intel), **Windows** và **Linux**.
 
-Repo này chỉ chứa các bản phát hành. **Tải bản mới nhất ở [Releases](https://github.com/DinhVietKhoi/claud-office-app/releases/latest).**
+Repo này chỉ chứa các bản phát hành. **Tải bản mới nhất ở [Releases](https://github.com/DinhVietKhoi/claud-office-app/releases/latest)**, hoặc cài bằng 1 lệnh ở mục [Cài bằng 1 lệnh](#cài-bằng-1-lệnh-nên-dùng).
 
 ![Văn phòng: Claude giao việc cho 3 sub-agent, pet báo có phòng khác đang chờ duyệt](docs/agents.png)
 
@@ -235,10 +235,34 @@ xem cài đặt, mã mời và danh sách người đang xin vào.
 
 ## Cài đặt và thiết lập
 
-### Tải và cài
+### Cài bằng 1 lệnh (nên dùng)
 
 Máy cần có sẵn **Claude Code** (lệnh `claude`). App đã gói kèm Node bên trong, không cần cài gì thêm. Nên có
 Chrome hoặc Edge để app mở thành cửa sổ riêng; không có thì app mở trong trình duyệt mặc định.
+
+**macOS và Linux:** mở Terminal, dán:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/DinhVietKhoi/claud-office-app/main/install.sh | sh
+```
+
+**Windows:** mở **PowerShell** (bấm Start, gõ PowerShell), dán:
+
+```powershell
+irm https://raw.githubusercontent.com/DinhVietKhoi/claud-office-app/main/install.ps1 | iex
+```
+
+Lệnh tự làm hết:
+- tải đúng bản cho máy và kiểm tra checksum;
+- tắt bản đang chạy (các phòng tự mở lại sau đó);
+- cài vào chỗ cố định: Mac là **Applications**, Linux là `~/.local/opt/claude-office`, Windows là
+  `%LOCALAPPDATA%\Claude Office`;
+- gỡ chặn của macOS / Windows, tạo lối tắt trong menu ứng dụng hoặc Start Menu;
+- mở app.
+
+Muốn cài lại hay lên bản mới bằng tay cũng chạy đúng lệnh đó. Dữ liệu (phòng, hồ sơ, team) giữ nguyên.
+
+### Tải và cài thủ công
 
 Tải bản mới nhất ở **[Releases](https://github.com/DinhVietKhoi/claud-office-app/releases/latest)**:
 
